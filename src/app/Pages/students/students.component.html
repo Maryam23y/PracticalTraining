@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <button mat-raised-button color="primary" (click)="onCreate()">Add Student</button>
+    <table class="table table-bordered">
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Course</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let students of student">
+            <td>{{students.id}}</td>
+            <td>{{students.name}}</td>
+            <td>{{students.address}}</td>
+            <td>{{students.course}}</td>
+            <td>{{students.phone}}</td>
+            <td>
+                <button mat-raised-button color="primary" (click)="updateStudent(students.id)">edit</button>
+                <button mat-raised-button color="accent" class="mx-2" (click)="deleteStudent(students.id)">delete</button>
+            </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+ 
